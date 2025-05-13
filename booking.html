@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | ESSOS Sports Arena Bengaluru</title>
+    <meta name="description" content="Explore our world-class cricket nets, football grounds, and training facilities. Features include professional turf, floodlights, and modern amenities at both locations.">
+    <meta name="keywords" content="cricket nets Bengaluru, football ground, sports facilities, cricket practice nets, football training ground, indoor nets">
+    <meta name="author" content="ESSOS Sports Arena">
+    <meta property="og:title" content="Premium Sports Facilities at ESSOS Sports Arena">
+    <meta property="og:description" content="State-of-the-art cricket and football facilities featuring professional turf, modern equipment, and comprehensive amenities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://essossports.com/facilities">
+    <link rel="canonical" href="https://essossports.com/facilities">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/facilities.css">
+    <meta name="theme-color" content="#1a73e8">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">ESSOS Sports Arena</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bookings -->
+    <main class="booking-section">
+        <h1>Book Our Facilities</h1>
+        <div class="booking-container">
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="facility">Select Facility:</label>
+                    <select id="facility" name="facility" required>
+                        <option value="">Choose a facility</option>
+                        <option value="cricket-nets">Cricket Nets</option>
+                        <option value="football-ground">Football Ground</option>
+                        <option value="indoor-training">Indoor Training Area</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingDate">Date:</label>
+                    <input type="date" id="bookingDate" name="bookingDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingTime">Time Slot:</label>
+                    <select id="bookingTime" name="bookingTime" required>
+                        <option value="">Select time slot</option>
+                        <option value="07:00">07:00 AM - 08:00 AM</option>
+                        <option value="08:00">08:00 AM - 09:00 AM</option>
+                        <option value="09:00">09:00 AM - 10:00 AM</option>
+                        <option value="10:00">10:00 AM - 11:00 AM</option>
+                        <option value="11:00">11:00 AM - 12:00 PM</option>
+                        <option value="12:00">12:00 PM - 01:00 PM</option>
+                        <option value="13:00">01:00 PM - 02:00 PM</option>
+                        <option value="14:00">02:00 PM - 03:00 PM</option>
+                        <option value="15:00">03:00 PM - 04:00 PM</option>
+                        <option value="16:00">04:00 PM - 05:00 PM</option>
+                        <option value="17:00">05:00 PM - 06:00 PM</option>
+                        <option value="18:00">06:00 PM - 07:00 PM</option>
+                        <option value="19:00">07:00 PM - 08:00 PM</option>
+                        <option value="20:00">08:00 PM - 09:00 PM</option>
+                        <option value="21:00">09:00 PM - 10:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="participants">Number of Participants:</label>
+                    <input type="number" id="participants" name="participants" min="1" max="30" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Special Requirements:</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Now</button>
+            </form>
+
+            <div class="booking-info">
+                <h2>Booking Information</h2>
+                <ul>
+                    <li>Minimum booking duration: 1 hour</li>
+                    <li>Please arrive 15 minutes before your slot</li>
+                    <li>Cancellation should be made 24 hours in advance</li>
+                    <li>Payment to be made at the venue</li>
+                    <li>Equipment rental available on request</li>
+                </ul>
+
+                <div class="contact-support">
+                    <h3>Need Help?</h3>
+                    <p>Contact our support team:</p>
+                    <p>Phone: +91-99020 40090</p>
+                    <p>Email: bookings@essossports.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ESSOS</h3>
+                <p>Providing top-quality cricket and football training facilities for athletes of all levels.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@essossports.com</li>
+                    <li>Phone: +91-99020 40090</li><li>Phone: +91-99456 14517</li>
+                    <li><a href="contact.html">Contact Form</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Location Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 7am - 10pm</li>
+                    <li>Saturday: 7am - 12am</li>
+                    <li>Sunday: 7am - 12am</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ESSOS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

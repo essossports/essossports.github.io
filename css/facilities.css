@@ -1,0 +1,163 @@
+.facilities-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/400');
+    height: 50vh;
+}
+
+.facilities-content {
+    padding: 4rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facility-type {
+    margin-bottom: 4rem;
+}
+
+.facility-type h2 {
+    color: #1a472a;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.facility-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facility-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.facility-details {
+    padding: 2rem;
+}
+
+.facility-details h3 {
+    color: #1a472a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.facility-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.facility-details li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.facility-details li:before {
+    content: "•";
+    color: #1a472a;
+    position: absolute;
+    left: 0;
+}
+
+/* Amenities Section */
+.amenities-section {
+    margin-top: 4rem;
+}
+
+.amenities-section h2 {
+    color: #1a472a;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.amenity {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.amenity-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.amenity h3 {
+    color: #1a472a;
+    margin-bottom: 0.5rem;
+}
+
+/* CTA Section */
+.facilities-cta {
+    background-color: #1a472a;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.facilities-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.facilities-cta p {
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+}
+
+.btn-outline:hover {
+    background-color: #ffd700;
+    color: #1a472a;
+}
+
+@media (max-width: 768px) {
+    .facilities-hero {
+        height: 40vh;
+    }
+
+    .facilities-content {
+        padding: 2rem 1rem;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
