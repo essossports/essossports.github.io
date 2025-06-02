@@ -1,0 +1,196 @@
+/* Booking Page Styles */
+.booking-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.booking-section h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Form Styles */
+.booking-form {
+    padding: 2rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #38a169;
+}
+
+/* Booking Info Section */
+.booking-info {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+}
+
+.booking-info h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.booking-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.booking-info li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #4a5568;
+}
+
+.booking-info li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4299e1;
+    font-weight: bold;
+}
+
+/* Contact Support Section */
+.contact-support {
+    background-color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.contact-support h3 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-support p {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+/* Time Slot Hover Effect */
+#bookingTime option:hover {
+    background-color: #f7fafc;
+}
+
+/* Form Validation Styles */
+.form-group input:invalid,
+.form-group select:invalid {
+    border-color: #fc8181;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-info {
+        border-left: none;
+        border-top: 4px solid #4299e1;
+    }
+}
+
+@media (max-width: 640px) {
+    .booking-section {
+        padding: 1rem;
+    }
+
+    .booking-section h1 {
+        font-size: 2rem;
+    }
+
+    .booking-container {
+        padding: 1rem;
+    }
+
+    .booking-form,
+    .booking-info {
+        padding: 1rem;
+    }
+}
+
+/* Animation for Form Submission */
+@keyframes submitPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.submit-btn:active {
+    animation: submitPulse 0.2s ease-in-out;
+}

@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About ESSOS Sports Arena | Our Story & Mission</title>
-    <meta name="description" content="Learn about ESSOS Sports Arena's journey in providing premier cricket and football training facilities in Bengaluru. Discover our mission, values, and commitment to sports excellence.">
-    <meta name="keywords" content="ESSOS Sports history, sports facility Bengaluru, cricket academy, football training center, sports facility management">
-    <meta name="author" content="ESSOS Sports Arena">
-    <meta property="og:title" content="About ESSOS Sports Arena">
-    <meta property="og:description" content="Discover the story behind Bengaluru's premier sports training facility. Learn about our mission and commitment to sports excellence.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://essossports.com/about">
-    <meta name="theme-color" content="#1a73e8">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link rel="stylesheet" href="public/css/common.css">
 
+  <!-- Page-specific CSS (if specified) -->
+  
+    <link rel="stylesheet" href="public/css/about.css">
+  
+  
+  <!-- You can add more meta tags, CSS, and JS files here -->
 </head>
 <body>
-    <!-- Header -->
-    <header>
+  <header>
         <nav>
             <div class="logo">ESSOS Sports Arena</div>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -31,10 +32,74 @@
             </ul>
         </nav>
     </header>
+    <style>
+/* Mobile nav styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  outline: none; /* Prevents focus zoom on mobile */
+  touch-action: manipulation; /* Improves tap behavior */
+}
+.nav-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    color: #222; /* Ensure dark text */
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 0;
+  }
+  .nav-links.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding: 12px 24px;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .nav-links a {
+    color: #222 !important; /* Force dark link color for visibility */
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+</style>
+  <main>
 
     <!-- About -->
     <section class="hero about-hero">
-        <h1>About PremierNets</h1>
+        <h1>About ESSOS</h1>
         <p>Building champions through world-class training facilities</p>
     </section>
 
@@ -42,7 +107,7 @@
         <div class="container">
             <div class="about-section">
                 <h2>Our Story</h2>
-                <p>Founded in 2020, PremierNets emerged from a vision to provide professional-grade training facilities for cricket and football enthusiasts. What started as a single facility has grown into two state-of-the-art training centers serving hundreds of athletes daily.</p>
+                <p>Founded in 2020, ESSOS emerged from a vision to provide professional-grade training facilities for cricket and football enthusiasts. What started as a single facility has grown into two state-of-the-art training centers serving hundreds of athletes daily.</p>
                 <p>Our commitment to excellence and passion for sports development has made us the preferred choice for both amateur and professional athletes in the region.</p>
             </div>
 
@@ -70,19 +135,19 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image" style="background-image: url('/api/placeholder/300/300');"></div>
-                        <h3>John Smith</h3>
+                        <h3>Mohammed Zaid</h3>
                         <p class="position">Founder & Director</p>
                         <p>Former national cricket player with 15 years of coaching experience</p>
                     </div>
                     <div class="team-member">
                         <div class="member-image" style="background-image: url('/api/placeholder/300/300');"></div>
-                        <h3>Sarah Johnson</h3>
+                        <h3>Khobaib</h3>
                         <p class="position">Head of Football Training</p>
                         <p>UEFA licensed coach with experience in premier league academies</p>
                     </div>
                     <div class="team-member">
                         <div class="member-image" style="background-image: url('/api/placeholder/300/300');"></div>
-                        <h3>Mike Patterson</h3>
+                        <h3>Ahmed Usman</h3>
                         <p class="position">Head of Cricket Training</p>
                         <p>Level 3 ECB coach with international playing experience</p>
                     </div>
@@ -91,8 +156,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+</main>
+  <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>ESSOS</h3>
@@ -103,7 +168,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
@@ -115,7 +180,7 @@
                 <ul>
                     <li>Email: info@essossports.com</li>
                     <li>Phone: +91-99020 40090</li><li>Phone: +91-99456 14517</li>
-                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -133,5 +198,6 @@
             <p>&copy; 2025 ESSOS. All rights reserved.</p>
         </div>
     </footer>
+  <script src="public/js/main.js"></script>
 </body>
 </html>

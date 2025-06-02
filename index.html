@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESSOS Sports Arena | Premier Cricket & Football Training Facilities in Bengaluru</title>
-    <meta name="description" content="Premium cricket and football training facilities in Bengaluru. Two locations offering professional nets, turf grounds, expert coaching, and tournament facilities. Book now!">
-    <meta name="keywords" content="cricket nets Bengaluru, football training, sports facility Bengaluru, cricket coaching, football practice, sports arena, ESSOS Sports">
-    <meta name="author" content="ESSOS Sports Arena">
-    <meta property="og:title" content="ESSOS Sports Arena | Premier Cricket & Football Training Facilities">
-    <meta property="og:description" content="Premium cricket and football training facilities in Bengaluru. Book your session today at our state-of-the-art sports facilities.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://essossports.com/">
-    <link rel="canonical" href="https://essossports.com/">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="public/css/common.css">
+
+  <!-- Page-specific CSS (if specified) -->
+  
+    <link rel="stylesheet" href="public/css/index.css">
+  
+  
+  <!-- You can add more meta tags, CSS, and JS files here -->
 </head>
 <body>
-    <!-- Header -->
-    <header>
+  <header>
         <nav>
             <div class="logo">ESSOS Sports Arena</div>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -30,89 +32,200 @@
             </ul>
         </nav>
     </header>
+    <style>
+/* Mobile nav styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  outline: none; /* Prevents focus zoom on mobile */
+  touch-action: manipulation; /* Improves tap behavior */
+}
+.nav-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    color: #222; /* Ensure dark text */
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 0;
+  }
+  .nav-links.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding: 12px 24px;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .nav-links a {
+    color: #222 !important; /* Force dark link color for visibility */
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+</style>
+  <main>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Premier Cricket & Football Training Facilities</h1>
-        <p>State-of-the-art nets and turf facilities at two convenient locations. Perfect for players of all skill levels.</p>
-        <a href="booking.html" class="btn">Book Now</a>
-    </section>
+<!-- <h1>Welcome to my EJS website!</h1> -->
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Premier Cricket & Football Training Facilities</h1>
+  <p>
+    State-of-the-art nets and turf facilities at two convenient locations.
+    Perfect for players of all skill levels.
+  </p>
+  <a href="booking.html" class="btn">Book Now</a>
+  
+</section>
 
-    <!-- Locations Section -->
-    <section class="locations">
-        <div class="section-title">
-            <h2>Our Locations</h2>
-            <p>Professional training facilities in two prime locations</p>
-        </div>
+<!-- Locations Section -->
+<section class="locations">
+  <div class="section-title">
+    <h2>Our Locations</h2>
+    <p>Professional training facilities in two prime locations</p>
+  </div>
 
-        <div class="location-cards">
-            <!-- Location 1 -->
-            <div class="location-card">
-                <div class="location-image" style="background-image: url('images/essos1-1.jpg'); background-position: center;"></div>
-                <div class="location-details">
-                    <h3>Essos Sports Arena</h3>
-                    <p>Our flagship facility featuring 8 cricket nets and 4 football practice areas on premium turf.</p>
-                    <p><strong>Address:</strong> 14th Main Rd, Balaji Layout, Dasarahalli, Bengaluru 560092</p>
-                    <a href="facility1.html" class="btn">View Details</a>
-                </div>
-            </div>
+  <div class="location-cards">
+    <!-- Location 1 -->
+    <div class="location-card">
+      <div
+        class="location-image"
+        style="
+          background-image: url('public/images/essos1-1.jpg');
+          background-position: center;
+        "
+      ></div>
+      <div class="location-details">
+        <h3>Essos Sports Arena</h3>
+        <p>
+          Our flagship facility featuring 8 cricket nets and 4 football practice
+          areas on premium turf.
+        </p>
+        <p>
+          <strong>Address:</strong> 14th Main Rd, Balaji Layout, Dasarahalli,
+          Bengaluru 560092
+        </p>
+        <a href="facility1.html" class="btn">View Details</a>
+        
+      </div>
+    </div>
 
-            <!-- Location 2 -->
-            <div class="location-card">
-                <div class="location-image" style="background-image: url('images/essos2-1.jpeg'); background-position: bottom;"></div>
-                <div class="location-details">
-                    <h3>Essos - The 24 Yards</h3>
-                    <p>Our newest facility with 6 cricket nets and 3 football practice areas with cutting-edge turf technology.</p>
-                    <p><strong>Address:</strong> 45/4, Kachmarnahalli Village, Vartur Hobli, Sarjapur, Bengaluru 560087</p>
-                    <a href="facility2.html" class="btn">View Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Location 2 -->
+    <div class="location-card">
+      <div
+        class="location-image"
+        style="
+          background-image: url('public/images/essos2-1.jpeg');
+          background-position: bottom;
+        "
+      ></div>
+      <div class="location-details">
+        <h3>Essos - The 24 Yards</h3>
+        <p>
+          Our newest facility with 6 cricket nets and 3 football practice areas
+          with cutting-edge turf technology.
+        </p>
+        <p>
+          <strong>Address:</strong> 45/4, Kachmarnahalli Village, Vartur Hobli,
+          Sarjapur, Bengaluru 560087
+        </p>
+        <a href="facility2.html" class="btn">View Details</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="section-title">
-            <h2>Why Choose Us</h2>
-            <p>Experience the benefits of our premium sports facilities</p>
-        </div>
+<!-- Features Section -->
+<section class="features">
+  <div class="section-title">
+    <h2>Why Choose Us</h2>
+    <p>Experience the benefits of our premium sports facilities</p>
+  </div>
 
-        <div class="features-container">
-            <div class="feature">
-                <div class="feature-icon">🏏</div>
-                <h3>Professional Grade Equipment</h3>
-                <p>High-quality nets and turf surfaces that meet professional standards for an authentic playing experience.</p>
-            </div>
+  <div class="features-container">
+    <div class="feature">
+      <div class="feature-icon">🏏</div>
+      <h3>Professional Grade Equipment</h3>
+      <p>
+        High-quality nets and turf surfaces that meet professional standards for
+        an authentic playing experience.
+      </p>
+    </div>
 
-            <div class="feature">
-                <div class="feature-icon">👨‍🏫</div>
-                <h3>Expert Coaching</h3>
-                <p>Access to certified coaches for both cricket and football, available for individual and group sessions.</p>
-            </div>
+    <div class="feature">
+      <div class="feature-icon">👨‍🏫</div>
+      <h3>Expert Coaching</h3>
+      <p>
+        Access to certified coaches for both cricket and football, available for
+        individual and group sessions.
+      </p>
+    </div>
 
-            <div class="feature">
-                <div class="feature-icon">⏱️</div>
-                <h3>Flexible Hours</h3>
-                <p>Open early mornings until late evenings, seven days a week, to accommodate your busy schedule.</p>
-            </div>
+    <div class="feature">
+      <div class="feature-icon">⏱️</div>
+      <h3>Flexible Hours</h3>
+      <p>
+        Open early mornings until late evenings, seven days a week, to
+        accommodate your busy schedule.
+      </p>
+    </div>
 
-            <div class="feature">
-                <div class="feature-icon">🏆</div>
-                <h3>Tournament Facilities</h3>
-                <p>Host your local tournaments and matches with our comprehensive facilities and support services.</p>
-            </div>
-        </div>
-    </section>
+    <div class="feature">
+      <div class="feature-icon">🏆</div>
+      <h3>Tournament Facilities</h3>
+      <p>
+        Host your local tournaments and matches with our comprehensive
+        facilities and support services.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Ready to Elevate Your Game?</h2>
-        <p>Book a session today or sign up for membership to enjoy special rates and privileges.</p>
-        <a href="booking.html" class="btn">Book Now</a>
-    </section>
+<!-- Call to Action -->
+<section class="cta">
+  <h2>Ready to Elevate Your Game?</h2>
+  <p>
+    Book a session today or sign up for membership to enjoy special rates and
+    privileges.
+  </p>
+  <a href="booking.html" class="btn">Book Now</a>
+</section>
 
-    <!-- Footer -->
-    <footer>
+</main>
+  <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>ESSOS</h3>
@@ -123,7 +236,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
@@ -135,7 +248,7 @@
                 <ul>
                     <li>Email: info@essossports.com</li>
                     <li>Phone: +91-99020 40090</li><li>Phone: +91-99456 14517</li>
-                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -153,5 +266,6 @@
             <p>&copy; 2025 ESSOS. All rights reserved.</p>
         </div>
     </footer>
+  <script src="public/js/main.js"></script>
 </body>
 </html>

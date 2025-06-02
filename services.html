@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Training Services | ESSOS Sports Arena Bengaluru</title>
-    
-    <!-- OpenGraph Meta Tags -->
-    <meta property="og:title" content="Professional Sports Training Services - ESSOS Sports Arena">
-    <meta property="og:description" content="Expert cricket and football coaching services in Bengaluru. Professional training programs, performance analysis, and specialized workshops.">
-    <meta property="og:image" content="https://essossports.com/images/cricket-coaching-lg.jpg">
-    <meta property="og:image:alt" content="Professional cricket coaching session at ESSOS Sports Arena">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://essossports.com/services">
-    <meta property="og:site_name" content="ESSOS Sports Arena">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Professional cricket and football training services in Bengaluru. Expert coaching, performance analysis, team training programs, and specialized workshops for all skill levels.">
-    <meta name="keywords" content="sports coaching Bengaluru, cricket training, football coaching, sports performance analysis, team training programs">
-    <meta name="author" content="ESSOS Sports Arena">
-    <link rel="canonical" href="https://essossports.com/services">
-    
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/services.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Page</title>
+  <link rel="stylesheet" href="public/css/common.css">
+
+  <!-- Page-specific CSS (if specified) -->
+  
+    <link rel="stylesheet" href="public/css/services.css">
+  
+  
+  <!-- You can add more meta tags, CSS, and JS files here -->
 </head>
 <body>
-    <!-- Header -->
-    <header>
+  <header>
         <nav>
             <div class="logo">ESSOS Sports Arena</div>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -41,6 +32,70 @@
             </ul>
         </nav>
     </header>
+    <style>
+/* Mobile nav styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  outline: none; /* Prevents focus zoom on mobile */
+  touch-action: manipulation; /* Improves tap behavior */
+}
+.nav-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    color: #222; /* Ensure dark text */
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 0;
+  }
+  .nav-links.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding: 12px 24px;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .nav-links a {
+    color: #222 !important; /* Force dark link color for visibility */
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+</style>
+  <main>
 
     <!-- Services -->
     <section class="hero services-hero">
@@ -48,9 +103,94 @@
         <p>Professional coaching and training programs for all skill levels</p>
     </section>
 
+    <section class="services-container">
+        <div class="service-category">
+            <h2>Individual Training</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-user"></i>
+                    <h3>Personal Coaching</h3>
+                    <p>One-on-one sessions tailored to your specific needs and goals</p>
+                    <ul>
+                        <li>Skill assessment and development</li>
+                        <li>Personalized training plans</li>
+                        <li>Regular progress tracking</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-running"></i>
+                    <h3>Fitness Training</h3>
+                    <p>Comprehensive fitness programs for athletes</p>
+                    <ul>
+                        <li>Strength and conditioning</li>
+                        <li>Speed and agility training</li>
+                        <li>Injury prevention</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category">
+            <h2>Group Programs</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Training</h3>
+                    <p>Specialized programs for sports teams and groups</p>
+                    <ul>
+                        <li>Team building exercises</li>
+                        <li>Group skill development</li>
+                        <li>Tactical training</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Youth Programs</h3>
+                    <p>Age-appropriate training for young athletes</p>
+                    <ul>
+                        <li>Fundamental skills development</li>
+                        <li>Fun and engaging activities</li>
+                        <li>Safe learning environment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category">
+            <h2>Specialized Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Analysis</h3>
+                    <p>Advanced technique analysis using video technology</p>
+                    <ul>
+                        <li>Detailed movement breakdown</li>
+                        <li>Performance improvement tips</li>
+                        <li>Before/after comparisons</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Events & Camps</h3>
+                    <p>Special training events and seasonal camps</p>
+                    <ul>
+                        <li>Holiday training camps</li>
+                        <li>Weekend workshops</li>
+                        <li>Competition preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Book your session today and take the first step towards achieving your goals</p>
+        <a href="booking.html" class="cta-button">Book Now</a>
+    </section>
     
-    <!-- Footer -->
-    <footer>
+</main>
+  <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>ESSOS</h3>
@@ -61,7 +201,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
@@ -73,7 +213,7 @@
                 <ul>
                     <li>Email: info@essossports.com</li>
                     <li>Phone: +91-99020 40090</li><li>Phone: +91-99456 14517</li>
-                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -91,5 +231,6 @@
             <p>&copy; 2025 ESSOS. All rights reserved.</p>
         </div>
     </footer>
+  <script src="public/js/main.js"></script>
 </body>
 </html>

@@ -1,26 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact ESSOS Sports Arena | Locations & Enquiries</title>
-    <meta name="description" content="Get in touch with ESSOS Sports Arena. Find our locations in Bengaluru, contact numbers, email, and business hours. Book a facility tour or enquire about memberships.">
-    <meta name="keywords" content="contact ESSOS sports, sports facility booking, cricket nets booking Bengaluru, football ground enquiry">
-    <meta name="author" content="ESSOS Sports Arena">
-    <meta property="og:title" content="Contact ESSOS Sports Arena">
-    <meta property="og:description" content="Reach out to us for bookings, enquiries, or facility tours. Two convenient locations in Bengaluru to serve you better.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://essossports.com/contact">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="public/css/common.css">
 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/pricing.css">
+  <!-- Page-specific CSS (if specified) -->
+  
+    <link rel="stylesheet" href="public/css/contact.css">
+  
+  
+  <!-- You can add more meta tags, CSS, and JS files here -->
 </head>
 <body>
-    <!-- Header -->
-    <header>
+  <header>
         <nav>
             <div class="logo">ESSOS Sports Arena</div>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -31,7 +33,70 @@
             </ul>
         </nav>
     </header>
-
+    <style>
+/* Mobile nav styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  outline: none; /* Prevents focus zoom on mobile */
+  touch-action: manipulation; /* Improves tap behavior */
+}
+.nav-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    color: #222; /* Ensure dark text */
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 0;
+  }
+  .nav-links.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding: 12px 24px;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .nav-links a {
+    color: #222 !important; /* Force dark link color for visibility */
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+</style>
+  <main>
     <!-- Contact -->
     <section class="hero contact-hero">
         <h1>Contact Us</h1>
@@ -154,8 +219,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+</main>
+  <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>ESSOS</h3>
@@ -166,7 +231,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
@@ -178,7 +243,7 @@
                 <ul>
                     <li>Email: info@essossports.com</li>
                     <li>Phone: +91-99020 40090</li><li>Phone: +91-99456 14517</li>
-                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -196,5 +261,6 @@
             <p>&copy; 2025 ESSOS. All rights reserved.</p>
         </div>
     </footer>
+  <script src="public/js/main.js"></script>
 </body>
 </html>
