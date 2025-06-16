@@ -1,5 +1,5 @@
 .contact-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/400');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/essos2-3.jpg');
     height: 50vh;
     display: flex;
     flex-direction: column;
